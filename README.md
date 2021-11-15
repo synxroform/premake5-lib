@@ -36,7 +36,7 @@ project "lib_a"
 
 projects "exe"
     kind "ConsoleApp"
-    links {"lib_a"} actually {"lib_a", "lib_b"}
+    links {"lib_a"} actually {"lib_a", "lib_b", "lib_c"}
 ```
 
 
