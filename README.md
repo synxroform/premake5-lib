@@ -9,7 +9,7 @@ project "lib_a"
     kind "StaticLib"
     links {"lib_b", "lib_c"}
 ```
-Actually it's dependencies will not be linked with it, because static libraries archived by ar command. 
+Actually it's dependencies will not be linked with it, because static libraries archived by **ar** command. 
 But any executable that use this library should manually link against library dependencies. 
 ```
 project "exe"
