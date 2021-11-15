@@ -24,3 +24,20 @@ project "exe"
     kind "ConsoleApp"
     links {"lib_a"}
 ```
+Propagation is transitive therefore ...
+```
+project "lib_b"
+    kind "StaticLib"
+    links {"lib_c"}
+
+project "lib_a"
+    kind "StaticLib"
+    links {"lib_b"}
+
+projects "exe"
+    kind "ConsoleApp"
+    links {"lib_a"} actually {"lib_a", "lib_b"}
+```
+
+
+
