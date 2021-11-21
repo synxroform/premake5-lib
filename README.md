@@ -34,7 +34,7 @@ project "lib_a"
     kind "StaticLib"
     links {"lib_b"}
 
-projects "exe"
+project "exe"
     kind "ConsoleApp"
     links {"lib_a"} actually {"lib_a", "lib_b", "lib_c"}
 ```
